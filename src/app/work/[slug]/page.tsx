@@ -31,8 +31,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${study.shortName} Case Study | Shihaab Tech`,
+    title: `${study.shortName} Case Study`,
     description: study.summary,
+    alternates: {
+      canonical: `/work/${study.slug}`,
+    },
+    openGraph: {
+      title: `${study.shortName} Case Study | Shihaab Tech`,
+      description: study.summary,
+      url: `/work/${study.slug}`,
+      type: "article",
+    },
   };
 }
 
@@ -106,6 +115,30 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </article>
       </section>
 
+      <section className="case-section case-proof-strip">
+        <div className="case-proof-header">
+          <p className="case-kicker">Project proof</p>
+          <h2>Live work with real operational depth.</h2>
+        </div>
+        <div className="case-process-list case-proof-items">
+          {study.proof.map((item, index) => (
+            <article key={item}>
+              <div className="case-process-icon">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <div>
+                <h3>{item}</h3>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className="stack-list case-tags" aria-label={`${study.shortName} project tags`}>
+          {study.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+      </section>
+
       <section className="case-section case-problem-grid">
         <div className="case-copy-block">
           <p className="case-kicker">Problem</p>
@@ -121,6 +154,26 @@ export default async function CaseStudyPage({ params }: PageProps) {
           <p className="case-kicker">Result</p>
           <h2>What it enabled</h2>
           <span>{study.outcome}</span>
+        </div>
+      </section>
+
+      <section className="case-section case-value-section">
+        <div className="case-value-intro">
+          <p className="case-kicker">Business value</p>
+          <h2>What the build now makes easier.</h2>
+        </div>
+        <div className="story-steps case-value-grid">
+          {study.businessValue.map((item, index) => (
+            <article className="story-step case-value-card" key={item.title}>
+              <div className="process-marker case-value-marker">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -146,6 +199,21 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <span>{metric.label}</span>
           </article>
         ))}
+      </section>
+
+      <section className="case-section case-split case-delivery-section">
+        <div>
+          <p className="case-kicker">Delivery focus</p>
+          <h2>The build priorities behind the finished product.</h2>
+        </div>
+        <div className="feature-list case-focus-list">
+          {study.deliveryFocus.map((item) => (
+            <div key={item}>
+              <CheckCircle2 aria-hidden="true" size={18} />
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="case-section case-split">

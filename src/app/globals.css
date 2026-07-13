@@ -1613,6 +1613,94 @@ h3 {
   height: 28px;
 }
 
+.faq-section {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.68fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.faq-intro {
+  position: sticky;
+  top: 96px;
+}
+
+.faq-note {
+  border: 1px solid rgba(99, 230, 190, 0.16);
+  background:
+    linear-gradient(145deg, rgba(99, 230, 190, 0.09), transparent 46%),
+    #0b110e;
+  padding: 22px;
+}
+
+.faq-note span,
+.faq-marker span,
+.case-proof-items article span,
+.case-value-card span {
+  color: var(--signal);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.faq-marker {
+  width: 46px;
+  height: 46px;
+  box-shadow: none;
+}
+
+.faq-note h3 {
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), Arial, sans-serif;
+  font-size: 23px;
+  line-height: 1.12;
+}
+
+.faq-note p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-item {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 18px;
+  min-height: auto;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(99, 230, 190, 0.065), transparent 42%),
+    var(--panel);
+  padding: 22px;
+}
+
+.faq-item h3 {
+  color: var(--foreground);
+  font-size: 22px;
+  font-weight: 760;
+  line-height: 1.16;
+}
+
+.faq-item p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.72;
+}
+
 .contact-section {
   padding: 112px 0;
   border-top: 1px solid var(--line);
@@ -2023,6 +2111,8 @@ h3 {
 
 .case-copy-block h2,
 .case-split h2,
+.case-proof-header h2,
+.case-value-intro h2,
 .case-final h2 {
   margin-top: 10px;
   color: var(--foreground);
@@ -2033,12 +2123,119 @@ h3 {
 
 .case-copy-block span,
 .case-final p,
+.case-value-card p,
 .case-process-list p {
   display: block;
   margin-top: 18px;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.75;
+}
+
+.case-proof-strip {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.76fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.case-proof-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.case-proof-items article {
+  min-height: 126px;
+  border: 1px solid rgba(99, 230, 190, 0.16);
+  background:
+    linear-gradient(145deg, rgba(99, 230, 190, 0.08), transparent 48%),
+    #0b110e;
+  padding: 20px;
+}
+
+.case-proof-items article h3 {
+  display: block;
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.12;
+}
+
+.case-tags {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.case-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  border: 1px solid rgba(247, 250, 245, 0.1);
+  background: rgba(247, 250, 245, 0.045);
+  padding: 0 11px;
+  color: #d8e3dd;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.case-value-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.case-value-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.case-value-card {
+  min-height: auto;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(99, 230, 190, 0.07), transparent 42%),
+    var(--panel);
+  padding: 22px;
+}
+
+.case-value-marker {
+  width: 46px;
+  height: 46px;
+  box-shadow: none;
+}
+
+.case-value-card h3 {
+  color: var(--foreground);
+  font-size: 24px;
+  font-weight: 780;
+  line-height: 1.12;
+}
+
+.case-focus-list {
+  display: grid;
+  gap: 10px;
+}
+
+.case-focus-list div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  border: 1px solid rgba(99, 230, 190, 0.16);
+  background: rgba(99, 230, 190, 0.055);
+  padding: 0 14px;
+  color: #d9e5df;
+  font-size: 14px;
+  font-weight: 760;
+}
+
+.case-focus-list svg {
+  color: var(--signal);
+  flex: 0 0 auto;
 }
 
 .case-split {
@@ -2331,8 +2528,19 @@ h3 {
   .story-board,
   .case-hero,
   .case-split,
+  .case-proof-strip,
+  .case-value-section,
+  .faq-layout,
   .contact-inner {
     grid-template-columns: 1fr;
+  }
+
+  .faq-intro {
+    position: static;
+  }
+
+  .case-tags {
+    grid-column: auto;
   }
 
   .service-grid,
@@ -2478,6 +2686,7 @@ h3 {
   .package-grid,
   .trust-grid,
   .proof-grid,
+  .case-proof-items,
   .case-problem-grid,
   .case-meta-grid,
   .case-metrics,
@@ -2487,6 +2696,18 @@ h3 {
 
   .process-step {
     min-height: auto;
+  }
+
+  .faq-item {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .faq-note,
+  .case-value-card,
+  .case-proof-items article {
+    padding: 18px;
   }
 
   .process-step-body {

@@ -19,6 +19,8 @@ export type CaseStudy = {
   timeline: string;
   stack: string[];
   metrics: Array<{ value: string; label: string }>;
+  businessValue: Array<{ title: string; text: string }>;
+  deliveryFocus: string[];
   features: string[];
   process: Array<{ title: string; text: string }>;
 };
@@ -52,6 +54,25 @@ export const caseStudies: CaseStudy[] = [
       { value: "10+", label: "product categories supported" },
       { value: "4", label: "admin-managed content areas" },
       { value: "1", label: "central business platform" },
+    ],
+    businessValue: [
+      {
+        title: "Clearer product discovery",
+        text: "Customers can understand categories, product details, and enquiry paths without needing manual explanation first.",
+      },
+      {
+        title: "Less code dependency",
+        text: "The business can update products, posts, applications, and key content from admin workflows instead of changing the codebase.",
+      },
+      {
+        title: "Room to grow",
+        text: "The platform can expand into deeper product data, more content, stronger SEO pages, and future customer journeys.",
+      },
+    ],
+    deliveryFocus: [
+      "Premium brand presentation for a traditional industry",
+      "Catalog, content, enquiry, and career flows connected to real admin needs",
+      "Responsive customer journeys with a backend structure ready for growth",
     ],
     features: [
       "Product catalog and detail pages",
@@ -104,6 +125,25 @@ export const caseStudies: CaseStudy[] = [
       { value: "6", label: "channel types planned" },
       { value: "3", label: "workspace roles" },
       { value: "1", label: "automation command center" },
+    ],
+    businessValue: [
+      {
+        title: "One operating space",
+        text: "Teams can manage contacts, groups, campaigns, schedules, delivery logs, and channel settings in one structured dashboard.",
+      },
+      {
+        title: "Repeatable campaign work",
+        text: "Common campaign tasks become clear workflows instead of scattered messages, files, spreadsheets, and disconnected tools.",
+      },
+      {
+        title: "Scalable product base",
+        text: "The MVP foundation can support more channel adapters, admin controls, audit paths, and workspace-level product features.",
+      },
+    ],
+    deliveryFocus: [
+      "SaaS-style architecture with protected workspaces and roles",
+      "Dashboard flows for contacts, groups, campaigns, logs, and channel connections",
+      "Automation-ready structure for scheduled delivery and future integrations",
     ],
     features: [
       "Company-scoped workspaces",

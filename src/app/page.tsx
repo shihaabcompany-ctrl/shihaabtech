@@ -201,6 +201,39 @@ const contactSteps = [
   },
 ];
 
+const faqs = [
+  {
+    question: "How long does a premium website usually take?",
+    answer:
+      "A focused landing page can usually move faster than a full business platform. Timeline depends on content, pages, forms, backend needs, and how quickly decisions are confirmed.",
+  },
+  {
+    question: "Can Shihaab Tech build custom apps, dashboards, or SaaS MVPs?",
+    answer:
+      "Yes. The work can include login, roles, databases, dashboards, admin panels, automations, integrations, deployment, and future-ready product structure.",
+  },
+  {
+    question: "Can you improve an existing website or app?",
+    answer:
+      "Yes. Existing builds can be redesigned, made mobile responsive, cleaned up for SEO, connected to forms, improved for performance, or expanded with backend features.",
+  },
+  {
+    question: "What do you need from me to start?",
+    answer:
+      "A rough goal is enough for the first step. Helpful details include your business type, target customers, pages needed, examples you like, timeline, and any existing logo or brand assets.",
+  },
+  {
+    question: "Do you support the project after launch?",
+    answer:
+      "Yes. After launch, the site or app can keep improving with bug fixes, new pages, analytics review, SEO updates, content changes, and new feature development.",
+  },
+  {
+    question: "Can you add forms, email, automations, or third-party integrations?",
+    answer:
+      "Yes. Contact forms, enquiry flows, dashboards, email notifications, WhatsApp/SMS workflows, payment-ready structure, CRM-style flows, and custom integrations can be planned into the build.",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -212,6 +245,7 @@ export default function Home() {
       <StackSection />
       <TrustSection />
       <ProcessSection />
+      <FAQSection />
       <ContactSection />
       <MobileStickyCta />
     </main>
@@ -620,6 +654,47 @@ function ProcessSection() {
             </article>
           );
         })}
+      </div>
+    </section>
+  );
+}
+
+function FAQSection() {
+  return (
+    <section id="faq" className="section faq-section">
+      <div className="faq-layout">
+        <div className="faq-intro">
+          <div className="section-heading">
+            <p>Questions</p>
+            <h2>Clear answers before the build starts.</h2>
+          </div>
+          <div className="story-step faq-note">
+            <div className="process-marker faq-marker">
+              <span>01</span>
+            </div>
+            <div>
+              <h3>Start simple</h3>
+              <p>
+                You do not need a perfect brief. A rough idea, problem, or
+                business goal is enough to shape the first plan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="story-steps faq-list">
+          {faqs.map((faq, index) => (
+            <article className="story-step faq-item" key={faq.question}>
+              <div className="process-marker faq-marker">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <div>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
