@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Shihaab Tech premium mark</title>
+  <desc id="desc">A refined S-shaped signal mark for Shihaab Tech.</desc>
+  <defs>
+    <linearGradient id="signal" x1="80" y1="408" x2="430" y2="102" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF2EF"/>
+      <stop offset="0.24" stop-color="#63E6BE"/>
+      <stop offset="0.58" stop-color="#5DF05B"/>
+      <stop offset="1" stop-color="#F7FFE8"/>
+    </linearGradient>
+    <filter id="shadow" x="31" y="33" width="450" height="438" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#03110C" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <path d="M420 108C339 60 203 67 143 134C94 189 126 247 226 263L299 275C383 289 414 346 358 405C303 463 190 462 82 406" stroke="#08100D" stroke-width="86" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M420 108C339 60 203 67 143 134C94 189 126 247 226 263L299 275C383 289 414 346 358 405C303 463 190 462 82 406" stroke="url(#signal)" stroke-width="54" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)"/>
+  <path d="M420 108C368 77 294 67 232 83" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.52"/>
+  <path d="M359 405C319 447 246 459 170 439" stroke="#075C3E" stroke-width="14" stroke-linecap="round" opacity="0.38"/>
+  <path d="M424 56L441 91L478 108L441 125L424 160L407 125L370 108L407 91L424 56Z" fill="#F7FFE8"/>
+  <path d="M424 78L434 99L456 108L434 117L424 138L414 117L392 108L414 99L424 78Z" fill="#0B1512"/>
+  <circle cx="83" cy="406" r="14" fill="#F3FFF1"/>
+</svg>

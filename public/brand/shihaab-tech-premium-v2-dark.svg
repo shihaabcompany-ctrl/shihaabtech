@@ -1,0 +1,22 @@
+<svg width="1280" height="320" viewBox="0 0 1280 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Shihaab Tech premium logo for dark backgrounds</title>
+  <desc id="desc">A premium Shihaab Tech wordmark with an S-shaped signal mark.</desc>
+  <defs>
+    <linearGradient id="signal" x1="56" y1="242" x2="262" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF2EF"/>
+      <stop offset="0.24" stop-color="#63E6BE"/>
+      <stop offset="0.58" stop-color="#5DF05B"/>
+      <stop offset="1" stop-color="#F7FFE8"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(28 34) scale(0.58)">
+    <path d="M420 108C339 60 203 67 143 134C94 189 126 247 226 263L299 275C383 289 414 346 358 405C303 463 190 462 82 406" stroke="#08100D" stroke-width="86" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M420 108C339 60 203 67 143 134C94 189 126 247 226 263L299 275C383 289 414 346 358 405C303 463 190 462 82 406" stroke="url(#signal)" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M424 56L441 91L478 108L441 125L424 160L407 125L370 108L407 91L424 56Z" fill="#F7FFE8"/>
+    <path d="M424 78L434 99L456 108L434 117L424 138L414 117L392 108L414 99L424 78Z" fill="#0B1512"/>
+  </g>
+  <text x="342" y="139" fill="#F7FAF5" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="92" font-weight="800">SHIHAAB</text>
+  <text x="342" y="219" fill="#B8C4BE" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="54" font-weight="650">TECH</text>
+  <path d="M490 201H760" stroke="#24342E" stroke-width="2"/>
+  <path d="M490 201H592" stroke="#63E6BE" stroke-width="6" stroke-linecap="round"/>
+</svg>
