@@ -19,7 +19,7 @@ import { SiteHeader } from "@/components/site-header";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Shihaab Tech, a focused IT startup founded by Shihaab Huvairris and Sriraam Jaisankar after graduating from Kongu Engineering College.",
+    "Meet Shihaab Tech, a focused IT startup founded by Shihaab huvairish and Sriraam Jaisankar after graduating from Kongu Engineering College.",
   alternates: {
     canonical: "/about",
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const team = [
   {
-    name: "Shihaab Huvairris",
+    name: "Shihaab huvairish",
     role: "CEO and Owner",
     image: "/team/shihaab-huvairris.png",
     imagePosition: "center 18%",
@@ -39,7 +39,7 @@ const team = [
   {
     name: "Sriraam Jaisankar",
     role: "Developer and Founding Team",
-    image: "/team/sriraam-jaisankar.jpg",
+    image: "/team/sriraam-jai.jpg",
     imagePosition: "45% 38%",
     headline: "Turns ideas into working digital products.",
     focus:
@@ -119,7 +119,7 @@ export default function AboutPage() {
           <p className="case-kicker">About Shihaab Tech</p>
           <h1>A founder-led IT startup built from college roots into product work.</h1>
           <span>
-            Shihaab Tech was started by Shihaab Huvairris and Sriraam
+            Shihaab Tech was started by Shihaab huvairish and Sriraam
             Jaisankar after they completed their undergraduate degree together
             at Kongu Engineering College. The company now builds premium
             websites, custom apps, SaaS MVPs, and automation systems for

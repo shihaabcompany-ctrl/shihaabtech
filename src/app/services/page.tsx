@@ -88,21 +88,29 @@ const process = [
     title: "Shape",
     text: "Turn the rough request into a clear offer, audience, feature list, and launch plan.",
     icon: MessageSquareText,
+    phase: "Plan",
+    outputs: ["Scope", "Pages", "Timeline"],
   },
   {
     title: "Design",
     text: "Build the visual direction, page rhythm, UI states, and responsive structure before coding deeply.",
     icon: Layers3,
+    phase: "Frame",
+    outputs: ["Wireframe", "UI system", "Mobile states"],
   },
   {
     title: "Develop",
     text: "Create the frontend, backend, database, integrations, and production-ready architecture.",
     icon: Code2,
+    phase: "Build",
+    outputs: ["Frontend", "Backend", "Integrations"],
   },
   {
     title: "Launch",
     text: "Test, optimize, deploy, and prepare the site or app for real customers and future features.",
     icon: Rocket,
+    phase: "Ship",
+    outputs: ["Testing", "Deploy", "Support path"],
   },
 ];
 
@@ -218,14 +226,16 @@ export default function ServicesPage() {
                     <div className="icon-box">
                       <Icon aria-hidden="true" size={21} />
                     </div>
-                    <span>{index === 0 ? "Plan" : index === 1 ? "Frame" : index === 2 ? "Build" : "Ship"}</span>
+                    <span>{item.phase}</span>
                   </div>
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
-                  <div className="process-mini-diagram" aria-hidden="true">
-                    <i />
-                    <i />
-                    <i />
+                  <div className="process-output-list" aria-label={`${item.title} outputs`}>
+                    {item.outputs.map((output) => (
+                      <span className="process-output-chip" key={output}>
+                        {output}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </article>
