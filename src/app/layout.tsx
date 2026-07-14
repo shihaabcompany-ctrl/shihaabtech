@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AnalyticsScripts } from "@/components/analytics-scripts";
+import { ProjectAssistant } from "@/components/project-assistant";
 import "./globals.css";
 
 const siteUrl = "https://shihaab.tech";
@@ -98,6 +99,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         {children}
+        <ProjectAssistant />
         <AnalyticsScripts />
       </body>
     </html>

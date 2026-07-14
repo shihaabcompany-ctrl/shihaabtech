@@ -2,183 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  Blocks,
-  Bot,
-  Braces,
   BriefcaseBusiness,
   CheckCircle2,
-  Code2,
   ExternalLink,
-  Globe2,
-  Layers3,
-  LayoutDashboard,
-  LineChart,
-  MessageSquareText,
-  MonitorSmartphone,
-  Rocket,
-  ShieldCheck,
-  Smartphone,
   Sparkles,
-  Target,
   Workflow,
 } from "lucide-react";
 import { LeadForm } from "@/components/lead-form";
-import { ProjectVisual } from "@/components/project-visual";
+import { SiteHeader } from "@/components/site-header";
 import { caseStudies } from "@/lib/case-studies";
-
-const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "Story", href: "#story" },
-  { label: "Work", href: "#projects" },
-  { label: "Packages", href: "#packages" },
-  { label: "Contact", href: "#contact" },
-];
-
-const storyBeats = [
-  {
-    title: "The first impression",
-    text: "A sharp hero, clear offer, and confident brand system tell visitors they are in the right place.",
-    icon: Sparkles,
-  },
-  {
-    title: "The trust layer",
-    text: "Services, case studies, technology choices, and process details make the business feel credible.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "The decision path",
-    text: "Every section guides the customer toward the next useful action without making the page feel crowded.",
-    icon: Workflow,
-  },
-  {
-    title: "The launch engine",
-    text: "The final build is fast, responsive, deployable, and ready to grow into forms, dashboards, or apps.",
-    icon: Rocket,
-  },
-];
-
-const services = [
-  {
-    title: "Premium Websites",
-    text: "Landing pages, company websites, portfolio sites, and product pages with a high-end first impression.",
-    icon: Globe2,
-  },
-  {
-    title: "Custom Web Apps",
-    text: "Dashboards, portals, admin systems, internal tools, and workflows designed around the way your team works.",
-    icon: LayoutDashboard,
-  },
-  {
-    title: "Mobile-first Interfaces",
-    text: "Responsive experiences that feel natural on phones, tablets, and desktop screens from day one.",
-    icon: Smartphone,
-  },
-  {
-    title: "Automation Systems",
-    text: "Messaging, campaign, content, and operations tools that reduce repeated manual work.",
-    icon: Bot,
-  },
-  {
-    title: "SaaS MVPs",
-    text: "Authentication, roles, database models, APIs, dashboards, billing-ready structure, and deployment setup.",
-    icon: Blocks,
-  },
-  {
-    title: "Product Care",
-    text: "Redesigns, performance improvements, bug fixes, SEO cleanup, and ongoing support after launch.",
-    icon: ShieldCheck,
-  },
-];
-
-const packages = [
-  {
-    title: "Launch Website",
-    text: "A premium one-page or compact business website built to explain your offer, build trust, and generate enquiries.",
-    fit: "Best for new startups, local businesses, creators, and service companies.",
-    icon: MonitorSmartphone,
-  },
-  {
-    title: "Business Platform",
-    text: "A full website with product/service pages, admin tools, content workflows, forms, and database-backed features.",
-    fit: "Best for businesses that need more than a brochure website.",
-    icon: BriefcaseBusiness,
-  },
-  {
-    title: "SaaS or Automation MVP",
-    text: "A custom app with login, dashboards, database, roles, integrations, automations, and launch-ready deployment.",
-    fit: "Best for founders and teams building a real product or internal system.",
-    icon: Workflow,
-  },
-];
-
-const trustPillars = [
-  {
-    title: "Premium before decoration",
-    text: "The design has to look modern, but the priority is clarity, trust, hierarchy, and conversion.",
-    icon: Sparkles,
-  },
-  {
-    title: "Built like a product",
-    text: "Even a landing page is structured so it can grow into forms, dashboards, admin tools, and workflows.",
-    icon: Blocks,
-  },
-  {
-    title: "Business-first execution",
-    text: "Every feature is tied to a practical customer action: enquire, understand, book, buy, apply, or manage.",
-    icon: Target,
-  },
-  {
-    title: "Launch and improve",
-    text: "The goal is not only a beautiful first version. It is a site or app that can keep improving after launch.",
-    icon: LineChart,
-  },
-];
-
-const projectProof = [
-  {
-    label: "Rozaliya platform",
-    title: "Business presence plus operating backend",
-    text: "A product-led website with catalog management, content workflows, enquiry paths, career applications, and admin-controlled updates.",
-    proof: "Live business platform",
-  },
-  {
-    label: "Zyrelo automation",
-    title: "SaaS-style dashboard for repeated work",
-    text: "A multi-channel automation system structured around contacts, groups, campaigns, delivery logs, scheduled jobs, and workspace roles.",
-    proof: "Working MVP system",
-  },
-  {
-    label: "Shihaab delivery",
-    title: "Design quality with product thinking",
-    text: "Every build is shaped around the customer journey, responsive UI, practical backend structure, and a clear path after launch.",
-    proof: "Full-stack execution",
-  },
-];
-
-const process = [
-  {
-    title: "Shape",
-    text: "We turn the rough request into a clear offer, audience, feature list, and launch plan.",
-    icon: MessageSquareText,
-  },
-  {
-    title: "Design",
-    text: "We build the visual direction, page rhythm, UI states, and responsive structure before coding deeply.",
-    icon: Layers3,
-  },
-  {
-    title: "Develop",
-    text: "We create the frontend, backend, database, integrations, and production-ready architecture.",
-    icon: Code2,
-  },
-  {
-    title: "Launch",
-    text: "We test, optimize, deploy, and prepare the site or app for real customers and future features.",
-    icon: Rocket,
-  },
-];
-
-const stack = ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"];
 
 const proof = [
   { value: "02", label: "real product builds" },
@@ -201,90 +33,22 @@ const contactSteps = [
   },
 ];
 
-const faqs = [
-  {
-    question: "How long does a premium website usually take?",
-    answer:
-      "A focused landing page can usually move faster than a full business platform. Timeline depends on content, pages, forms, backend needs, and how quickly decisions are confirmed.",
-  },
-  {
-    question: "Can Shihaab Tech build custom apps, dashboards, or SaaS MVPs?",
-    answer:
-      "Yes. The work can include login, roles, databases, dashboards, admin panels, automations, integrations, deployment, and future-ready product structure.",
-  },
-  {
-    question: "Can you improve an existing website or app?",
-    answer:
-      "Yes. Existing builds can be redesigned, made mobile responsive, cleaned up for SEO, connected to forms, improved for performance, or expanded with backend features.",
-  },
-  {
-    question: "What do you need from me to start?",
-    answer:
-      "A rough goal is enough for the first step. Helpful details include your business type, target customers, pages needed, examples you like, timeline, and any existing logo or brand assets.",
-  },
-  {
-    question: "Do you support the project after launch?",
-    answer:
-      "Yes. After launch, the site or app can keep improving with bug fixes, new pages, analytics review, SEO updates, content changes, and new feature development.",
-  },
-  {
-    question: "Can you add forms, email, automations, or third-party integrations?",
-    answer:
-      "Yes. Contact forms, enquiry flows, dashboards, email notifications, WhatsApp/SMS workflows, payment-ready structure, CRM-style flows, and custom integrations can be planned into the build.",
-  },
-];
-
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <StorySection />
-      <ServicesSection />
-      <ProjectsSection />
-      <PackagesSection />
-      <StackSection />
-      <TrustSection />
-      <ProcessSection />
-      <FAQSection />
+      <HomeOverviewSection />
+      <HomeWorkPreview />
       <ContactSection />
       <MobileStickyCta />
     </main>
   );
 }
 
-function Header() {
-  return (
-    <header className="site-header" aria-label="Main navigation">
-      <Link href="#top" className="brand-link" aria-label="Shihaab Tech home">
-        <Image
-          src="/brand/shihaab-tech-premium-v2-dark.svg"
-          alt="Shihaab Tech"
-          width={260}
-          height={65}
-          priority
-        />
-      </Link>
-
-      <nav className="desktop-nav" aria-label="Sections">
-        {navItems.map((item) => (
-          <Link key={item.href} href={item.href}>
-            {item.label}
-          </Link>
-        ))}
-      </nav>
-
-      <Link className="nav-cta" href="#contact">
-        Start a project
-        <ArrowRight aria-hidden="true" size={16} />
-      </Link>
-    </header>
-  );
-}
-
 function HeroSection() {
   return (
     <section id="top" className="hero-shell">
-      <Header />
+      <SiteHeader brandHref="#top" />
 
       <div className="hero-visual" aria-hidden="true">
         <div className="visual-grid" />
@@ -348,11 +112,11 @@ function HeroSection() {
             engineering discipline of a real product team.
           </p>
           <div className="hero-actions">
-            <Link className="primary-button" href="#contact">
+            <Link className="primary-button" href="/contact">
               Start a project
               <ArrowRight aria-hidden="true" size={18} />
             </Link>
-            <Link className="secondary-button" href="#projects">
+            <Link className="secondary-button" href="/projects">
               See selected work
               <ExternalLink aria-hidden="true" size={17} />
             </Link>
@@ -372,189 +136,58 @@ function HeroSection() {
   );
 }
 
-function StorySection() {
-  return (
-    <section id="story" className="story-section">
-      <div className="story-intro">
-        <p>Visual storytelling</p>
-        <h2>A modern website should guide the customer, not just decorate the screen.</h2>
-        <span>
-          The page should not simply list services. It should explain what you do,
-          prove why clients can trust you, and make the next step feel obvious.
-        </span>
-      </div>
+function HomeOverviewSection() {
+  const routes = [
+    {
+      title: "About Shihaab Tech",
+      text: "Meet the founders, the story behind the company, and the principles that shape every build.",
+      href: "/about",
+      icon: Sparkles,
+      label: "Company story",
+    },
+    {
+      title: "Services",
+      text: "Explore premium websites, custom apps, SaaS MVPs, automations, support, and launch-ready packages.",
+      href: "/services",
+      icon: Workflow,
+      label: "What we build",
+    },
+    {
+      title: "Projects",
+      text: "See live project proof, case studies, and the business value behind Rozaliya and Zyrelo.",
+      href: "/projects",
+      icon: BriefcaseBusiness,
+      label: "Selected work",
+    },
+  ];
 
-      <div className="story-board">
-        <div className="story-device" aria-hidden="true">
-          <div className="device-top">
-            <i />
-            <i />
-            <i />
-          </div>
-          <div className="device-hero">
-            <Image
-              src="/brand/shihaab-tech-premium-v2-mark.svg"
-              alt=""
-              width={112}
-              height={112}
-            />
-            <div>
-              <span>Shihaab Tech</span>
-              <strong>From first impression to working product</strong>
-            </div>
-          </div>
-          <div className="device-lines">
-            <span />
-            <span />
-            <span />
-          </div>
-          <div className="device-modules">
-            <i />
-            <i />
-            <i />
-          </div>
+  return (
+    <section className="section home-overview-section">
+      <div className="split-heading section-heading">
+        <div>
+          <p>Start here</p>
+          <h2>Choose the path that matches what you need.</h2>
         </div>
-
-        <div className="story-steps">
-          {storyBeats.map((beat, index) => {
-            const Icon = beat.icon;
-
-            return (
-              <article key={beat.title} className="story-step">
-                <span className="story-index">0{index + 1}</span>
-                <div className="icon-box">
-                  <Icon aria-hidden="true" size={21} />
-                </div>
-                <div>
-                  <h3>{beat.title}</h3>
-                  <p>{beat.text}</p>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ServicesSection() {
-  return (
-    <section id="services" className="section services-section">
-      <div className="section-heading">
-        <p>What we build</p>
-        <h2>Digital products that look premium and work like tools.</h2>
-      </div>
-
-      <div className="service-grid">
-        {services.map((service) => {
-          const Icon = service.icon;
-
-          return (
-            <article className="service-card" key={service.title}>
-              <div className="icon-box">
-                <Icon aria-hidden="true" size={22} />
-              </div>
-              <h3>{service.title}</h3>
-              <p>{service.text}</p>
-            </article>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
-
-function ProjectsSection() {
-  return (
-    <section id="projects" className="section projects-section">
-      <div className="section-heading">
-        <p>Selected work</p>
-        <h2>Case studies that explain the business value behind the build.</h2>
-      </div>
-
-      <div className="project-grid">
-        {caseStudies.map((project) => (
-          <article className="project-card" key={project.name}>
-            <ProjectVisual
-              type={project.visual}
-              logo={project.logo}
-              logoAlt={project.logoAlt}
-            />
-            <div className="project-content">
-              <span>{project.type}</span>
-              <h3>{project.name}</h3>
-              <ProjectStory label="Challenge" text={project.challenge} />
-              <ProjectStory label="Build" text={project.build} />
-              <ProjectStory label="Outcome" text={project.outcome} />
-              <Link
-                className="project-live-link"
-                href={`/work/${project.slug}`}
-              >
-                Read case study
-                <ArrowRight aria-hidden="true" size={16} />
-              </Link>
-              <Link
-                className="project-live-link secondary-live-link"
-                href={project.href}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {project.linkLabel}
-                <ExternalLink aria-hidden="true" size={16} />
-              </Link>
-              <div className="project-proof">
-                {project.proof.map((item) => (
-                  <div key={item}>
-                    <CheckCircle2 aria-hidden="true" size={16} />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="project-tags">
-                {project.tags.map((tag) => (
-                  <small key={tag}>{tag}</small>
-                ))}
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function ProjectStory({ label, text }: { label: string; text: string }) {
-  return (
-    <div className="project-story">
-      <strong>{label}</strong>
-      <p>{text}</p>
-    </div>
-  );
-}
-
-function PackagesSection() {
-  return (
-    <section id="packages" className="section packages-section">
-      <div className="section-heading">
-        <p>Engagements</p>
-        <h2>Choose the type of build that matches your next step.</h2>
       </div>
 
       <div className="package-grid">
-        {packages.map((item, index) => {
-          const Icon = item.icon;
+        {routes.map((route, index) => {
+          const Icon = route.icon;
 
           return (
-            <article className="package-card" key={item.title}>
+            <Link className="package-card home-route-card" href={route.href} key={route.title}>
               <div className="package-topline">
                 <span>0{index + 1}</span>
                 <Icon aria-hidden="true" size={22} />
               </div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <div className="package-fit">{item.fit}</div>
-            </article>
+              <small>{route.label}</small>
+              <h3>{route.title}</h3>
+              <p>{route.text}</p>
+              <strong>
+                Explore
+                <ArrowRight aria-hidden="true" size={16} />
+              </strong>
+            </Link>
           );
         })}
       </div>
@@ -562,139 +195,44 @@ function PackagesSection() {
   );
 }
 
-function StackSection() {
+function HomeWorkPreview() {
   return (
-    <section className="stack-band" aria-label="Technology stack">
-      <div className="stack-copy">
-        <Braces aria-hidden="true" size={22} />
-        <span>Modern stack for fast sites, real apps, and future growth</span>
+    <section className="section home-work-section">
+      <div className="section-heading">
+        <p>Selected work</p>
+        <h2>Two real builds, shown briefly here.</h2>
       </div>
-      <div className="stack-list">
-        {stack.map((item) => (
-          <span key={item}>{item}</span>
+
+      <div className="home-work-grid">
+        {caseStudies.map((project) => (
+          <article className="trust-item proof-card home-work-card" key={project.slug}>
+            <span>{project.type}</span>
+            <h3>{project.name}</h3>
+            <p>{project.summary}</p>
+            <div className="project-tags">
+              {project.tags.slice(0, 3).map((tag) => (
+                <small key={tag}>{tag}</small>
+              ))}
+            </div>
+            <div className="home-work-actions">
+              <Link href={`/work/${project.slug}`}>
+                Case study
+                <ArrowRight aria-hidden="true" size={16} />
+              </Link>
+              <Link href={project.href} target="_blank" rel="noreferrer">
+                Live project
+                <ExternalLink aria-hidden="true" size={16} />
+              </Link>
+            </div>
+          </article>
         ))}
       </div>
-    </section>
-  );
-}
 
-function TrustSection() {
-  return (
-    <section className="section trust-section">
-      <div className="trust-panel">
-        <div className="section-heading">
-          <p>Why Shihaab Tech</p>
-          <h2>Professional enough for clients, practical enough for real business.</h2>
-        </div>
-
-        <div className="trust-grid">
-          {trustPillars.map((pillar) => {
-            const Icon = pillar.icon;
-
-            return (
-              <article className="trust-item" key={pillar.title}>
-                <div className="icon-box">
-                  <Icon aria-hidden="true" size={21} />
-                </div>
-                <h3>{pillar.title}</h3>
-                <p>{pillar.text}</p>
-              </article>
-            );
-          })}
-        </div>
-
-        <div className="trust-grid proof-grid" aria-label="Shihaab Tech project proof">
-          {projectProof.map((item) => (
-            <article className="trust-item proof-card" key={item.label}>
-              <span>{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <strong>{item.proof}</strong>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ProcessSection() {
-  return (
-    <section id="process" className="section process-section">
-      <div className="section-heading">
-        <p>How we work</p>
-        <h2>A focused build process from idea to launch.</h2>
-      </div>
-
-      <div className="process-timeline">
-        <div className="process-rail" aria-hidden="true" />
-        {process.map((item, index) => {
-          const Icon = item.icon;
-
-          return (
-            <article className="process-step" key={item.title}>
-              <div className="process-marker">
-                <span>0{index + 1}</span>
-              </div>
-              <div className="process-step-body">
-                <div className="process-topline">
-                  <div className="icon-box">
-                    <Icon aria-hidden="true" size={21} />
-                  </div>
-                  <span>{index === 0 ? "Plan" : index === 1 ? "Frame" : index === 2 ? "Build" : "Ship"}</span>
-                </div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <div className="process-mini-diagram" aria-hidden="true">
-                  <i />
-                  <i />
-                  <i />
-                </div>
-              </div>
-            </article>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
-
-function FAQSection() {
-  return (
-    <section id="faq" className="section faq-section">
-      <div className="faq-layout">
-        <div className="faq-intro">
-          <div className="section-heading">
-            <p>Questions</p>
-            <h2>Clear answers before the build starts.</h2>
-          </div>
-          <div className="story-step faq-note">
-            <div className="process-marker faq-marker">
-              <span>01</span>
-            </div>
-            <div>
-              <h3>Start simple</h3>
-              <p>
-                You do not need a perfect brief. A rough idea, problem, or
-                business goal is enough to shape the first plan.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="story-steps faq-list">
-          {faqs.map((faq, index) => (
-            <article className="story-step faq-item" key={faq.question}>
-              <div className="process-marker faq-marker">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-              </div>
-              <div>
-                <h3>{faq.question}</h3>
-                <p>{faq.answer}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+      <div className="section-cta-row">
+        <Link className="secondary-button" href="/projects">
+          View all project details
+          <ArrowRight aria-hidden="true" size={18} />
+        </Link>
       </div>
     </section>
   );
