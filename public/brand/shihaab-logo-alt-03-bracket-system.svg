@@ -1,0 +1,30 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Shihaab Tech logo alternative 03 - bracket system</title>
+  <desc id="desc">A software-focused bracket logo with a clean Shihaab Tech wordmark for dark backgrounds.</desc>
+  <defs>
+    <linearGradient id="bracketSignal" x1="54" y1="270" x2="306" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FAF5"/>
+      <stop offset="0.28" stop-color="#63E6BE"/>
+      <stop offset="0.7" stop-color="#4EF4F1"/>
+      <stop offset="1" stop-color="#F7FFE8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="360" fill="#060908"/>
+  <g transform="translate(52 42)">
+    <rect x="0" y="0" width="260" height="260" rx="32" fill="#0A100D" stroke="#223A32" stroke-width="2"/>
+    <path d="M84 72L42 130L84 188" stroke="url(#bracketSignal)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M176 72L218 130L176 188" stroke="url(#bracketSignal)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M162 58L104 202" stroke="#F7FAF5" stroke-width="16" stroke-linecap="round"/>
+    <path d="M118 88C144 72 181 76 194 99C209 126 183 140 145 145C107 150 86 165 101 190C115 212 154 218 192 196" stroke="#07110E" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M118 88C144 72 181 76 194 99C209 126 183 140 145 145C107 150 86 165 101 190C115 212 154 218 192 196" stroke="url(#bracketSignal)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="84" cy="72" r="5" fill="#F7FFE8"/>
+    <circle cx="176" cy="188" r="5" fill="#4EF4F1"/>
+  </g>
+  <g transform="translate(390 94)">
+    <text x="0" y="76" fill="#F7FAF5" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="88" font-weight="850" letter-spacing="1">SHIHAAB</text>
+    <text x="0" y="146" fill="#B8C4BE" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="48" font-weight="740" letter-spacing="8">TECH</text>
+    <path d="M164 132H520" stroke="#22342E" stroke-width="2"/>
+    <path d="M164 132H312" stroke="#4EF4F1" stroke-width="6" stroke-linecap="round"/>
+    <text x="2" y="194" fill="#86948E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" letter-spacing="3">CODE  SYSTEMS  AUTOMATION</text>
+  </g>
+</svg>

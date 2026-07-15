@@ -19,7 +19,7 @@ import { SiteHeader } from "@/components/site-header";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Shihaab Tech, a focused IT startup founded by Shihaab huvairish and Sriraam Jaisankar after graduating from Kongu Engineering College.",
+    "Meet Shihaab Tech, a focused IT startup founded by Shihaab Huvairris and Sriraam Jaisankar after graduating from Kongu Engineering College.",
   alternates: {
     canonical: "/about",
   },
@@ -27,24 +27,48 @@ export const metadata: Metadata = {
 
 const team = [
   {
-    name: "Shihaab huvairish",
+    name: "Shihaab Huvairris",
     role: "CEO and Owner",
     image: "/team/shihaab-huvairris.png",
     imagePosition: "center 18%",
+    badge: "Strategy",
     headline: "Owns the company direction and client trust.",
     focus:
       "Shihaab leads the business vision, project direction, client conversations, and the standard of presentation every build has to reach.",
-    proof: ["Founder-led client communication", "Project vision and business fit", "Brand quality and growth direction"],
+    proof: [
+      "Founder-led client communication",
+      "Project vision and business fit",
+      "Brand quality and growth direction",
+    ],
   },
   {
     name: "Sriraam Jaisankar",
     role: "Developer and Founding Team",
     image: "/team/sriraam-jai.jpg",
     imagePosition: "45% 38%",
+    badge: "Engineering",
     headline: "Turns ideas into working digital products.",
     focus:
       "Sriraam handles frontend, backend, product systems, and data-aware engineering while studying a Master's in Data Science at the Technical University of Vienna.",
     proof: ["Full-stack product development", "SaaS and automation workflows", "Data Science Master's exposure"],
+  },
+];
+
+const founderSignals = [
+  {
+    title: "Direct founder access",
+    text: "Project conversations stay close to the people responsible for decisions, delivery, and quality.",
+    icon: UsersRound,
+  },
+  {
+    title: "Strategy and build connected",
+    text: "The business direction and technical execution are shaped together instead of being passed between disconnected teams.",
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: "Proof before promises",
+    text: "The company shows shipped work, visible ownership, and a practical delivery process instead of relying on vague claims.",
+    icon: ShieldCheck,
   },
 ];
 
@@ -119,7 +143,7 @@ export default function AboutPage() {
           <p className="case-kicker">About Shihaab Tech</p>
           <h1>A founder-led IT startup built from college roots into product work.</h1>
           <span>
-            Shihaab Tech was started by Shihaab huvairish and Sriraam
+            Shihaab Tech was started by Shihaab Huvairris and Sriraam
             Jaisankar after they completed their undergraduate degree together
             at Kongu Engineering College. The company now builds premium
             websites, custom apps, SaaS MVPs, and automation systems for
@@ -178,6 +202,7 @@ export default function AboutPage() {
                   className="team-photo"
                   style={{ objectPosition: person.imagePosition }}
                 />
+                <span className="team-photo-badge">{person.badge}</span>
               </div>
               <div>
                 <span>{person.role}</span>
@@ -195,6 +220,39 @@ export default function AboutPage() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section founder-delivery-section">
+        <div className="founder-delivery-panel">
+          <div className="founder-delivery-copy">
+            <p>Founder-led delivery</p>
+            <h2>
+              Small team, visible ownership, and a clear path from idea to
+              launch.
+            </h2>
+            <span>
+              Clients are not passed through layers of account managers. The
+              people shaping the promise are close to the people building the
+              product, which keeps decisions faster and the work more focused.
+            </span>
+          </div>
+
+          <div className="founder-signal-grid">
+            {founderSignals.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <article className="founder-signal-card" key={item.title}>
+                  <div className="icon-box">
+                    <Icon aria-hidden="true" size={20} />
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </section>
 

@@ -1,0 +1,25 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Shihaab Tech premium logo option 03 - Editorial Wordmark</title>
+  <desc id="desc">A refined wordmark-led Shihaab Tech identity with a minimal signal seal.</desc>
+  <defs>
+    <linearGradient id="wordSeal" x1="75" y1="234" x2="214" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FAF5"/>
+      <stop offset="0.48" stop-color="#68E7C7"/>
+      <stop offset="1" stop-color="#E9F3DE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="360" fill="#050807"/>
+  <g transform="translate(66 73)">
+    <rect x="0" y="0" width="178" height="178" rx="28" fill="#080D0B" stroke="#22342E" stroke-width="1.6"/>
+    <path d="M127 49C107 36 73 39 59 55C45 72 55 90 84 94L108 98C143 103 150 132 124 151C99 169 60 167 40 151" stroke="#050807" stroke-width="35" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M127 49C107 36 73 39 59 55C45 72 55 90 84 94L108 98C143 103 150 132 124 151C99 169 60 167 40 151" stroke="url(#wordSeal)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M142 34L148 47L162 53L148 59L142 72L136 59L122 53L136 47L142 34Z" fill="#F7FAF5"/>
+  </g>
+  <g transform="translate(300 79)">
+    <text x="0" y="92" fill="#F8FBF7" font-family="Space Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="104" font-weight="720" letter-spacing="1">Shihaab</text>
+    <text x="5" y="154" fill="#AEBBB5" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="740" letter-spacing="18">TECH</text>
+    <path d="M154 142H680" stroke="#1F332D" stroke-width="2"/>
+    <path d="M154 142H274" stroke="#68E7C7" stroke-width="4" stroke-linecap="round"/>
+    <text x="7" y="202" fill="#74827C" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="650" letter-spacing="4">MODERN WEBSITES AND PRODUCT SYSTEMS</text>
+  </g>
+</svg>

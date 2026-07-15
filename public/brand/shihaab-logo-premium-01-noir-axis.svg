@@ -1,0 +1,33 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Shihaab Tech premium logo option 01 - Noir Axis</title>
+  <desc id="desc">A restrained luxury technology wordmark with an abstract S axis monogram.</desc>
+  <defs>
+    <linearGradient id="axisStroke" x1="86" y1="286" x2="278" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9F3EE"/>
+      <stop offset="0.38" stop-color="#65E6C2"/>
+      <stop offset="1" stop-color="#B9F7DD"/>
+    </linearGradient>
+    <linearGradient id="axisMetal" x1="48" y1="42" x2="300" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F1DE" stop-opacity="0.52"/>
+      <stop offset="0.5" stop-color="#6CEBC8" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#F6F1DE" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="360" fill="#050807"/>
+  <g transform="translate(52 36)">
+    <rect x="18" y="18" width="252" height="252" rx="36" fill="#080D0B" stroke="url(#axisMetal)" stroke-width="1.6"/>
+    <rect x="50" y="50" width="188" height="188" rx="28" stroke="#1A2A25" stroke-width="1.2"/>
+    <path d="M192 76C162 57 111 62 88 88C68 111 81 136 123 142L165 148C212 155 225 194 190 223C157 250 101 247 69 223" stroke="#050807" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M192 76C162 57 111 62 88 88C68 111 81 136 123 142L165 148C212 155 225 194 190 223C157 250 101 247 69 223" stroke="url(#axisStroke)" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M222 64V230" stroke="#F6F1DE" stroke-width="8" stroke-linecap="round" opacity="0.88"/>
+    <circle cx="222" cy="64" r="4" fill="#F6F1DE"/>
+    <circle cx="222" cy="230" r="4" fill="#65E6C2"/>
+  </g>
+  <g transform="translate(390 93)">
+    <text x="0" y="77" fill="#F8FBF7" font-family="Space Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="92" font-weight="760" letter-spacing="6">SHIHAAB</text>
+    <text x="4" y="144" fill="#AEBBB5" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="15">TECH</text>
+    <path d="M154 132H510" stroke="#1E302A" stroke-width="2"/>
+    <path d="M154 132H284" stroke="#65E6C2" stroke-width="4" stroke-linecap="round"/>
+    <text x="6" y="194" fill="#74827C" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="650" letter-spacing="5">PREMIUM DIGITAL SYSTEMS</text>
+  </g>
+</svg>
